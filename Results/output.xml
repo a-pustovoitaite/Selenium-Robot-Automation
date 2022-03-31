@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.1 on win32)" generated="20220324 15:44:54.087" rpa="false" schemaversion="2">
+<suite id="s1" name="DataDrivencsv" source="C:\Users\a-pustovoitaite\robot-scripts\Youtube_Course_Project\TestCases\TestsDataDriven\DataDrivencsv.robot">
+<kw name="Start TestSuite" library="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url.${env}}</arg>
+<arg>${browser}[0]</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220324 15:44:54.345" level="INFO">Opening browser 'chrome' to base url 'https://www.barkyn.com/checkout/login'.</msg>
+<status status="PASS" starttime="20220324 15:44:54.344" endtime="20220324 15:44:58.272"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220324 15:44:58.272" endtime="20220324 15:44:58.396"/>
+</kw>
+<status status="PASS" starttime="20220324 15:44:54.344" endtime="20220324 15:44:58.396"/>
+</kw>
+<test id="s1-t1" name="Verify login fails with invalid credits">
+<kw name="Invalid login scenarios">
+<arg>${useremail}</arg>
+<arg>123456</arg>
+<arg>Algo de errado aconteceu. Verifique o email ou palavra-passe por favor</arg>
+<msg timestamp="20220324 15:44:58.398" level="FAIL">Variable '${useremail}' not found.</msg>
+<status status="FAIL" starttime="20220324 15:44:58.397" endtime="20220324 15:44:58.399"/>
+</kw>
+<status status="FAIL" starttime="20220324 15:44:58.396" endtime="20220324 15:44:58.399">Variable '${useremail}' not found.</status>
+</test>
+<test id="s1-t2" name="Verify login fails with invalid credits">
+<kw name="Invalid login scenarios">
+<arg>${useremail}</arg>
+<arg>123456</arg>
+<arg>Email invÃ¡lido</arg>
+<msg timestamp="20220324 15:44:58.403" level="FAIL">Variable '${useremail}' not found.</msg>
+<status status="FAIL" starttime="20220324 15:44:58.402" endtime="20220324 15:44:58.403"/>
+</kw>
+<status status="FAIL" starttime="20220324 15:44:58.401" endtime="20220324 15:44:58.403">Variable '${useremail}' not found.</status>
+</test>
+<kw name="Finish TestSuite" library="CommonFunctionality" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220324 15:44:58.404" endtime="20220324 15:45:00.661"/>
+</kw>
+<status status="PASS" starttime="20220324 15:44:58.404" endtime="20220324 15:45:00.661"/>
+</kw>
+<status status="FAIL" starttime="20220324 15:44:54.090" endtime="20220324 15:45:00.661"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="DataDrivencsv">DataDrivencsv</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220324 15:44:58.400" level="WARN">Multiple test cases with name 'Verify login fails with invalid credits' executed in test suite 'DataDrivencsv'.</msg>
+</errors>
+</robot>

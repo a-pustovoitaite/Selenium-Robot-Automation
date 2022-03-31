@@ -1,0 +1,3 @@
+﻿*** Test Cases ***;${useremail};${password};${errormessage};
+Test1;barkyn@gmail.com;123456;Algo de errado aconteceu. Verifique o email ou palavra-passe por favor;
+Test2;barkyn@gmail;123456;Email inválido;
